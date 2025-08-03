@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Great Wall of Memes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="siteHeader">
+    <h1>The Great Wall of Memes</h1>
+    <h3>"Stick your memes"</h3>
+  </header>
+
+  <div id="grid"></div>
+
+  <!-- Modal for Buying Pixels -->
+  <div id="formModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Buy Pixels</h2>
+      <form id="buyForm">
+        <p>Start Pixel: <span id="pixelIdDisplay"></span></p>
+        <input type="number" name="width" placeholder="Width (in blocks)" min="1" max="100" required />
+        <input type="number" name="height" placeholder="Height (in blocks)" min="1" max="100" required />
+        <input type="text" name="name" placeholder="Hover Text" required />
+        <input type="url" name="url" placeholder="Website URL" required />
+        <input type="file" name="image" accept="image/*" required />
+        <button type="submit">$ Buy Block</button>
+        <button type="button" onclick="closeForm()">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <!-- Your Script -->
+  <script src="script.js"></script>
+</body>
+</html>
